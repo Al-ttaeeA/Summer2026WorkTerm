@@ -21,7 +21,13 @@ p { margin: 0 0 1.15em; }
 .process-section { background: var(--paper); }
 .reading-columns { display: block; max-width: 660px; }
 .reading-columns .lead { margin-bottom: 24px; }
+.research-figure { margin: 42px 0 0; padding: 14px 14px 12px; border: 1px solid var(--rule); background: color-mix(in srgb, var(--paper) 88%, var(--paper-deep)); }
+.research-figure img { display: block; width: 100%; height: auto; }
+.research-figure figcaption { max-width: 680px; margin-top: 12px; color: var(--body); font: italic 12px/1.55 var(--serif); }
+.research-figure figcaption span { font-style: normal; font-weight: 700; }
 
 @media (max-width: 800px) {
 	.reading-columns { max-width: none; }
+	.research-figure { margin-top: 32px; padding: 9px 9px 10px; }
+	.research-figure figcaption { font-size: 11px; }
 }
