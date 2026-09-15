@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A University of Guelph Bachelor of Computing co-op work term report on undergraduate research in combinatorics.">
+  <title>Generating Complement-Avoiding Sequences | Summer 2026 Work Term Report</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <header class="site-header">
+    <div class="masthead">
+      <a class="wordmark" href="#top" aria-label="Back to the beginning">Summer / 26</a>
+      <span class="masthead-subtitle">A Bachelor of Computing co-op journal</span>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#project">Research</a>
+      <a href="#process">Process</a>
+      <a href="#learning">Reflection</a>
+    </nav>
+  </header>
+
+  <main id="top" class="blog-shell">
+    <article class="post">
+      <header class="post-header">
+        <p class="eyebrow">University of Guelph / Work Term Report</p>
+        <h1>Generating complement-avoiding sequences</h1>
+        <p class="post-dek">A reflection on a summer spent asking how mathematical structure can become an algorithm - and how an open-ended research problem changes the person solving it.</p>
+        <div class="post-meta"><span>Undergraduate Research Assistant</span><span>Summer 2026</span><span>Research journal</span></div>
+      </header>
+
+      <div class="post-layout">
+        <aside class="post-sidebar" aria-label="Article information">
+          <div class="sidebar-block">
+            <p class="sidebar-label">In this report</p>
+            <nav class="article-nav" aria-label="Article sections">
+              <a href="#project">The research question</a>
+              <a href="#process">The research process</a>
+              <a href="#results">The resulting construction</a>
+              <a href="#learning">Learning outcomes</a>
+              <a href="#conclusion">Final reflection</a>
+            </nav>
+          </div>
+          <div class="sidebar-block facts-block">
+            <p class="sidebar-label">At a glance</p>
+            <dl>
+              <div><dt>Role</dt><dd>Undergraduate Research Assistant</dd></div>
+              <div><dt>Field</dt><dd>Theoretical Computer Science / Combinatorics</dd></div>
+              <div><dt>Project began</dt><dd>Mid-June, Summer 2026</dd></div>
+              <div><dt>Major result</dt><dd>Optimal O(1) time per generated symbol</dd></div>
+            </dl>
+          </div>
+          <div class="sidebar-block sidebar-note">
+            <p class="sidebar-label">Supervision</p>
+            <p>Working under the supervision of Joseph Sawada, I studied how to generate maximal complement avoiding sequences efficiently.</p>
+          </div>
+        </aside>
+
+        <div class="post-body">
+          <p class="article-opening">The co-op officially began in May; the main research project began in mid-June. The work focused on a problem in theoretical computer science, specifically combinatorics.</p>
+
+          <section id="project" class="article-section">
+            <div class="section-heading"><span class="section-rule"></span><div><p class="section-label">The research question</p><h2>The combinatorial constraint</h2></div></div>
+            <div class="reading-columns">
+              <p class="lead">Imagine a cyclic string built to contain carefully chosen patterns. A related object, a de Bruijn sequence, contains every possible string of a given length. Complement avoiding sequences add a constraint: whenever one string appears, its complement cannot.</p>
+              <div><p>A maximal sequence contains exactly one member of each complementary pair, while excluding self-complementary strings. The challenge was not just to find such sequences, but to design and prove a construction that generates them in optimal constant time per symbol.</p></div>
+            </div>
+          </section>
+
+          <section id="process" class="article-section process-section">
+            <div class="section-heading"><span class="section-rule"></span><div><p class="section-label">From question to construction</p><h2>An iterative research process</h2></div></div>
+            <p class="section-intro">The project developed through a cycle of literature review, examples, candidate constructions, and proof. At each stage, the results determined which question or case needed to be examined next.</p>
+            <div class="process-list">
+              <article class="process-step"><h3>Orient</h3><p>I learned the terminology and read existing combinatorics literature to understand what was already known and where the open space was.</p></article>
+              <article class="process-step"><h3>Explore</h3><p>I examined examples, recorded patterns, developed possible approaches, and used counterexamples to identify promising directions.</p></article>
+              <article class="process-step"><h3>Prove</h3><p>Promising constructions had to move from an observed pattern to a proof. Failed approaches were useful evidence, not wasted effort.</p></article>
+              <article class="process-step"><h3>Translate</h3><p>After finding the constructions, the work shifted toward writing the definitions, algorithms, proofs, and results so another reader could follow them.</p></article>
+            </div>
+          </section>
+
+          <section id="results" class="article-section results-section">
+            <div class="section-heading"><span class="section-rule"></span><div><p class="section-label">What emerged</p><h2>The resulting construction</h2></div></div>
+            <div class="results-intro"><p class="lead">The main outcome was an optimal algorithm for generating the sequence in all conditions, with the construction shaped by the alphabet size and the window length.</p></div>
+            <div class="case-table">
+              <div class="case-row"><span>k odd</span><strong>Equivalent to negative avoiding sequences under a shift in the alphabet.</strong></div>
+              <div class="case-row"><span>k even</span><strong>Requires separate constructions depending on the parity of n.</strong></div>
+              <div class="case-row"><span>Writing</span><strong>The write-up was complete except for the k-even, n-even case at the end of the term.</strong></div>
+            </div>
+            <p class="result-note">An even-k construction was found, but its technical details are intentionally omitted here because they are too complex for this report.</p>
+          </section>
+
+          <section id="learning" class="article-section learning-section">
+            <div class="section-heading"><span class="section-rule"></span><div><p class="section-label">Five outcomes, in retrospect</p><h2>Learning how to do research</h2></div></div>
+            <p class="section-intro">The most important result was not a single algorithm. It was becoming more independent in the habits that make research possible.</p>
+            <div class="outcomes" data-accordion>
+              <article class="outcome is-open"><button class="outcome-trigger" aria-expanded="true" aria-controls="outcome-1"><span class="outcome-title">Reading comprehension</span><span class="outcome-tag">Communicating</span><span class="plus" aria-hidden="true"></span></button><div class="outcome-panel" id="outcome-1"><div><span class="mini-label">The shift</span><p>Research papers were slow at first because they assumed background knowledge I had not yet developed. Over time, I became better at identifying the important concepts, tracing references, and using earlier papers to decode unfamiliar terminology. Weekly meetings could then focus on harder research questions instead of basic explanations.</p></div><div class="outcome-meta"><span class="mini-label">Success looked like</span><p>Understanding papers independently and applying ideas from previous research to my own problem.</p></div></div></article>
+              <article class="outcome"><button class="outcome-trigger" aria-expanded="false" aria-controls="outcome-2"><span class="outcome-title">Written communication</span><span class="outcome-tag">Communicating</span><span class="plus" aria-hidden="true"></span></button><div class="outcome-panel" id="outcome-2"><div><span class="mini-label">The shift</span><p>Communicating mathematics is different from solving it. Ideas that seem obvious to the author still need to be made explicit for the reader. Feedback improved the organization of definitions and proofs, and made my explanations more precise.</p></div><div class="outcome-meta"><span class="mini-label">Success looked like</span><p>A coherent research paper that presents the results clearly and responds to the reader's likely background.</p></div></div></article>
+              <article class="outcome"><button class="outcome-trigger" aria-expanded="false" aria-controls="outcome-3"><span class="outcome-title">Problem solving</span><span class="outcome-tag">Critical + creative thinking</span><span class="plus" aria-hidden="true"></span></button><div class="outcome-panel" id="outcome-3"><div><span class="mini-label">The shift</span><p>Open-ended work strengthened my ability to break a large problem into smaller ones, test approaches, and continue when there was no predefined solution path. By the end of the term, I could develop and apply approaches with much less help.</p></div><div class="outcome-meta"><span class="mini-label">Success looked like</span><p>Explaining why approaches failed, recognizing promising directions, and eventually solving the problem.</p></div></div></article>
+              <article class="outcome"><button class="outcome-trigger" aria-expanded="false" aria-controls="outcome-4"><span class="outcome-title">Information literacy</span><span class="outcome-tag">Literacy</span><span class="plus" aria-hidden="true"></span></button><div class="outcome-panel" id="outcome-4"><div><span class="mini-label">The shift</span><p>I became more comfortable finding literature, following references, and identifying the origins of mathematical ideas. I also learned that information literacy means understanding the context and assumptions behind a result, not merely locating it.</p></div><div class="outcome-meta"><span class="mini-label">Success looked like</span><p>Keeping an organized collection of definitions, theorems, proof techniques, and references I could retrieve and apply.</p></div></div></article>
+              <article class="outcome"><button class="outcome-trigger" aria-expanded="false" aria-controls="outcome-5"><span class="outcome-title">Personal organization</span><span class="outcome-tag">Professional + ethical behaviour</span><span class="plus" aria-hidden="true"></span></button><div class="outcome-panel" id="outcome-5"><div><span class="mini-label">The shift</span><p>With only weekly reporting, day-to-day planning was my responsibility. Short-term goals and meeting preparation created structure, while flexibility made room for experiments and unexpected turns. I learned to move on from an unproductive direction without abandoning careful thinking.</p></div><div class="outcome-meta"><span class="mini-label">Success looked like</span><p>Managing research without being told what to do and completing the main research and writing tasks by term's end.</p></div></div></article>
+            </div>
+          </section>
+
+          <section id="conclusion" class="article-section conclusion-section">
+            <p class="section-label">A final reflection</p>
+            <h2>Research requires independence, precision, and persistence.</h2>
+            <p>This work term taught me how research is actually conducted: finding and understanding prior work, exploring uncertain approaches, learning from failed ideas, developing a solution, communicating mathematical results, and managing the process independently. I finished with a substantially greater ability to work on open-ended mathematical and computational problems - and a clearer understanding of what future research will ask of me.</p>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div><span class="eyebrow">Acknowledgment</span><p>Thank you to <strong>Joseph Sawada</strong> for supervision, feedback, and guidance throughout the work term.</p></div>
+    <div class="footer-meta"><span>University of Guelph</span><span>Summer 2026</span><a href="#top">Back to top &#8593;</a></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
